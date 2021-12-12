@@ -1,0 +1,7 @@
+{
+  "name": "weatherapp_ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

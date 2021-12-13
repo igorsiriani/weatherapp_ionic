@@ -1,0 +1,34 @@
+<ion-content class="container">
+  <div class="weatherContainer">
+    <div class="weather">
+        <img
+            class="weatherIcon"
+            src="{{icon}}"  
+        />  
+        <p class="tempText">{{temp}}˚</p>
+        <p class="weatherText">{{weather}}</p>
+        <div class="weatherMinMax">
+            <span class="min">{{min}}˚</span> 
+            <span class="max">{{max}}˚</span>
+        </div>
+    </div>
+    <div class="rowContainer">
+        <div class="cardsContainer" scrollX="true">
+          <div *ngFor="let item of list" class="cardHour">
+            <div class="containerCard">
+              <p class="cardTemp">{{getTemp(item)}}˚</p>
+              <img
+                class="cardIcon"
+                [src]="getIcon(item)"
+              />
+              <p class="cardTime">{{getHour(item)}}</p>
+            </div>
+          </div>  
+        </div>
+    </div>
+    <div class="navigation">
+        <button (click)="goBack()" class="btnLeft">Today</button>
+        <button (click)="navigate('/next-days')" class="btnRight">7 Days</button>
+    </div>
+  </div>
+</ion-content>

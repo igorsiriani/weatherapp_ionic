@@ -1,0 +1,22 @@
+<ion-content class="container">
+  <div>
+    <ion-icon (click)="goBack()" name="arrow-back-outline" class="arrow"></ion-icon>
+  </div>
+    <div class="cardsContainer">
+    <div *ngFor="let item of list" class="cardHour">
+      <!-- <div class="containerDay"> -->
+        <span class="cardTemp">{{getDay(item)}}</span>  
+      <!-- </div> -->
+      <div class="containerImg">
+        <img
+          class="cardIcon"
+          [src]="getIcon(item)"
+        />
+        <div class="containerMinMax">
+          <p class="cardTime">{{getMin(item)}}˚</p>
+          <p class="cardTime">{{getMax(item)}}˚</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
